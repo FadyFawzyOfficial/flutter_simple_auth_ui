@@ -8,15 +8,15 @@ import '../widgets/auth_text_field.dart';
 import '../widgets/primary_button.dart';
 import '../widgets/secondary_button.dart';
 
-class SignInScreen extends StatefulWidget {
-  const SignInScreen({Key? key}) : super(key: key);
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({Key? key}) : super(key: key);
 
   @override
-  State<SignInScreen> createState() => _SignInScreenState();
+  State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _SignInScreenState extends State<SignInScreen> {
-  bool isPasswordObscure = true;
+class _SignUpScreenState extends State<SignUpScreen> {
+  bool isPasswordObscure = true, isPasswordConfirmationObscure = true;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class _SignInScreenState extends State<SignInScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  kSignInScreenHeaderText,
+                  kSignUpScreenHeaderText,
                   style: kHeading2TextStyle,
                 ),
                 kSizedBoxHeight24,
@@ -55,13 +55,21 @@ class _SignInScreenState extends State<SignInScreen> {
                             () => isPasswordObscure = !isPasswordObscure),
                       ),
                       kSizedBoxHeight32,
+                      AuthPasswordField(
+                        hintText: kPasswordConfirmationText,
+                        isObscureText: isPasswordConfirmationObscure,
+                        togglePasswordVisibility: () => setState(() =>
+                            isPasswordConfirmationObscure =
+                                !isPasswordConfirmationObscure),
+                      ),
+                      kSizedBoxHeight32,
                       PrimaryButton(
-                        label: kSignInText,
+                        label: kSignUpText,
                         onPressed: () {},
                       ),
                       kAuthOrTextWidget,
                       SecondaryButton(
-                        label: kSignUpText,
+                        label: kSignInText,
                         onPressed: () {},
                       ),
                     ],
