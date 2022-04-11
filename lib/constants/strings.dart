@@ -1,3 +1,7 @@
+// Constants Screens names
+const kSignInScreenName = '/signIn';
+const kSignUpScreenName = '/signUp';
+
 // Constants Labels and Texts
 const kSignInScreenHeaderText = 'Sign in to your\naccount';
 const kSignUpScreenHeaderText = 'Sign up with a new\naccount';

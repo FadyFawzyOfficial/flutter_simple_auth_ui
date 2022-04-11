@@ -62,7 +62,8 @@ class _SignInScreenState extends State<SignInScreen> {
                       kAuthOrTextWidget,
                       SecondaryButton(
                         label: kSignUpText,
-                        onPressed: () {},
+                        onPressed: () =>
+                            Navigator.pushNamed(context, kSignUpScreenName),
                       ),
                     ],
                   ),
