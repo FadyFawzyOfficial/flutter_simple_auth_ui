@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_simple_auth_ui/widgets/auth_password_field.dart';
 
 import '../constants/strings.dart';
 import '../constants/styles.dart';
@@ -50,10 +51,9 @@ class _SignInScreenState extends State<SignInScreen> {
                         keyboardType: TextInputType.emailAddress,
                       ),
                       kSizedBoxHeight32,
-                      AuthTextField(
+                      AuthPasswordField(
                         hintText: kPasswordText,
                         isObscureText: !isObscureText,
-                        isPasswordField: true,
                         togglePasswordVisibility: togglePasswordVisibility,
                       ),
                       kSizedBoxHeight32,
