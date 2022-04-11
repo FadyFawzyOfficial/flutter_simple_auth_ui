@@ -70,7 +70,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       kAuthOrTextWidget,
                       SecondaryButton(
                         label: kSignInText,
-                        onPressed: () {},
+                        onPressed: () => Navigator.pop(context),
                       ),
                     ],
                   ),
